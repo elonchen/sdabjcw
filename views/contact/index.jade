@@ -40,7 +40,7 @@ block body
         input.form-control(type='text', name='name', value!='<%= name %>')
         span.help-block <%- errfor.name %>
       div.form-group(class!='<%- errfor.email ? "has-error" : "" %>')
-        label 你的邮箱:
+        label 你的手机号码:
         input.form-control(type='text', name='email', value!='<%= email %>')
         span.help-block <%- errfor.email %>
       div.form-group(class!='<%- errfor.message ? "has-error" : "" %>')

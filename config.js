@@ -6,7 +6,7 @@ exports.mongodb = {
 };
 exports.companyName = '山航乘务北京中队';
 exports.projectName = '山航乘务北京中队OA';
-exports.systemEmail = 'sda_test@163.com';
+exports.systemEmail = 'admin@sdabj.com';
 exports.cryptoKey = 'k3yb0ardc4t';
 exports.loginAttempts = {
   forIp: 50,
@@ -20,9 +20,9 @@ exports.smtp = {
     address: process.env.SMTP_FROM_ADDRESS || 'admin@sdabj.com'
   },
   credentials: {
-    user: process.env.SMTP_USERNAME || 'sda_test@163.com',
-    password: process.env.SMTP_PASSWORD || 'sda12345678',
-    host: process.env.SMTP_HOST || 'smtp.163.com',
+    user: process.env.SMTP_USERNAME || 'admin@sdabj.com',
+    password: process.env.SMTP_PASSWORD || 'sda123456SDA',
+    host: process.env.SMTP_HOST || 'admin@sdabj.com',
     ssl: true
   }
 };
