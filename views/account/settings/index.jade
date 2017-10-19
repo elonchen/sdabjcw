@@ -88,23 +88,19 @@ block body
         input.form-control(type='text', name='first', readonly value!='<%- first %>')
         span.help-block <%- errfor.first %>
       div.form-group(class!='<%- errfor.middle ? "has-error" : "" %>')
-        label 分队:
+        label 管理权限:
         input.form-control(type='text', name='middle', readonly value!='<%- middle %>')
         span.help-block <%- errfor.middle %>
       div.form-group(class!='<%- errfor.last ? "has-error" : "" %>')
-        label 公司聘任岗位:
+        label 岗位:
         input.form-control(type='text', name='last', readonly value!='<%- last %>')
         span.help-block <%- errfor['last'] %>
-      div.form-group(class!='<%- errfor.company ? "has-error" : "" %>')
-        label 岗位级别:
-        input.form-control(type='text', name='company', readonly value!='<%- company %>')
-        span.help-block <%- errfor.company %>
       div.form-group(class!='<%- errfor.phone ? "has-error" : "" %>')
         label 员工号：
         input.form-control(type='text', name='phone',readonly  value!='<%- phone %>')
         span.help-block <%- errfor.phone %>
       div.form-group(class!='<%- errfor.zip ? "has-error" : "" %>')
-        label 评测角色:
+        label 企业微信:
         input.form-control(type='text', name='zip', readonly value!='<%- zip %>')
         span.help-block <%- errfor.zip %>
       div.form-group

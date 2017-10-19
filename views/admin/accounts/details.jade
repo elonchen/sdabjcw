@@ -50,45 +50,27 @@ block body
         input.form-control(type='text', name='first', value!='<%- first %>')
         span.help-block <%- errfor.first %>
       div.form-group(class!='<%- errfor.middle ? "has-error" : "" %>')
-        label 分队:
+        label 系统管理:
         select.form-control(name='middle' value!='<%- zip %>')
-          option(value='1分队') 1分队
-          option(value='2分队') 2分队
-          option(value='3分队') 3分队
-          option(value='4分队') 4分队
-          option(value='5分队') 5分队
-          option(value='6分队') 6分队
-          option(value='维修支持') 维修支持
+          option(value='管理员') 管理员
+          option(value='普通') 普通
           option(value='其他') 其他
         //input.form-control(type='text', name='middle', value!='<%- middle %>')
         span.help-block <%- errfor.middle %>
       div.form-group(class!='<%- errfor.last ? "has-error" : "" %>')
-        label 公司聘任岗位:
+        label 分类:
         select.form-control(name='last' value!='<%- zip %>')
-          option(value='一级技术员') 一级技术员
-          option(value='二级技术员') 二级技术员
-          option(value='高级技术员') 高级技术员
-          option(value='检验工程师') 检验工程师
-          option(value='排故工程师') 排故工程师
-          option(value='高级排故工程师') 高级排故工程师
-          option(value='维修保障员') 维修保障员
-          option(value='一级特种车司机') 一级特种车司机
-          option(value='二级特种车司机') 二级特种车司机
-          option(value='三级维修勤务员（特车）') 三级维修勤务员（特车）
-          option(value='中级维修调度管理员') 中级维修调度管理员
-          option(value='北京维修基地航线中队副中队长') 北京维修基地航线中队副中队长
-          option(value='北京维修基地副经理兼北京维修基地航线中队') 北京维修基地副经理兼北京维修基地航线中队
-          option(value='综合业务助理') 综合业务助理
+          option(value='乘务长') 乘务长
+          option(value='经济舱乘务员') 经济舱乘务员
+          option(value='头等舱') 头等舱
           option(value='其他') 其他
         //input.form-control(type='text', name='last', value!='<%- last %>')
         span.help-block <%- errfor['last'] %>
       div.form-group(class!='<%- errfor.company ? "has-error" : "" %>')
-        label 岗位级别:
+        label 待用:
         select.form-control(name='company' value!='<%- zip %>')
-          option(value='初级') 初级
-          option(value='中级') 中级
-          option(value='高级') 高级
-          option(value='管理') 管理
+          option(value='初级') 一
+          option(value='中级') 二
         //input.form-control(type='text', name='company', value!='<%- company %>')
         span.help-block <%- errfor.company %>
       div.form-group(class!='<%- errfor.phone ? "has-error" : "" %>')
@@ -96,15 +78,8 @@ block body
         input.form-control(type='text', name='phone', value!='<%- phone %>')
         span.help-block <%- errfor.phone %>
       div.form-group(class!='<%- errfor.zip ? "has-error" : "" %>')
-        label 评测角色:
-        select.form-control(name='zip' value!='<%- zip %>')
-          option(value='航线中级岗及以下') 航线中级岗及以下
-          option(value='维修支持中级岗及以下') 维修支持中级岗及以下
-          option(value='航线或维修支持主管') 航线或维修支持主管
-          option(value='副中队长') 副中队长
-          option(value='中队长') 中队长
-          option(value='其他') 其他
-        //input.form-control(type='text', name='zip', value!='<%- zip %>')
+        label 企业微信帐号:
+        input.form-control(type='text', name='zip', value!='<%- zip %>')
         span.help-block <%- errfor.zip %>
       div.form-group
         button.btn.btn-primary.btn-update(type='button') 更改
