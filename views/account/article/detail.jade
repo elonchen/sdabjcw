@@ -63,11 +63,11 @@ block body
         div.container-fluid
             each reader in article.readers
                 if reader.isFinished
-                    div.col-sm-3
+                    div.col-sm-3.col-xs-3
                         p.text-success #{reader.name}
         h3 未签阅人员
         div.container-fluid
             each reader in article.readers
                 if !reader.isFinished
-                    div.col-sm-3
-                        p.text-danger #{reader.name}
+                    div.col-sm-3.col-xs-3
+                        span.text-danger #{reader.name}

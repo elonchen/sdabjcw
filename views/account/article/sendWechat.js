@@ -4,7 +4,7 @@ var https = require('https');
 
 exports.sendWechatUnread = function(usernames,title,general,url,agentId){
     var access_tokenAPP = "";
-    https.get('https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww954f4987fb9829cd&corpsecret=F11sbF7TdKBSssBW5-CSTolGCYdINFeZGvZdSKcLv_c', (res) => {
+    https.get('https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=wxe74e8f31ff04c3e2&corpsecret=hfJjipXtHbIChimlWPOFJ8EXN7bGyBlEcnvNLFiX0FA', (res) => {
     res.setEncoding('utf8');
     res.on('data', (d) => {
         d = JSON.parse(String(d));

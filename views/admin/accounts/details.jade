@@ -59,7 +59,7 @@ block body
         span.help-block <%- errfor.middle %>
       div.form-group(class!='<%- errfor.last ? "has-error" : "" %>')
         label 分类:
-        select.form-control(name='last' value!='<%- zip %>')
+        select.form-control(name='last' value!='<%- last %>')
           option(value='乘务长') 乘务长
           option(value='经济舱乘务员') 经济舱乘务员
           option(value='头等舱') 头等舱

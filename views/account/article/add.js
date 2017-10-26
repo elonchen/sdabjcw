@@ -1,5 +1,5 @@
 exports.add = function(req, res, next){
-    if(req.user.username == "test"||req.user.username == "003033"||req.user.username == "013569"||req.user.username == "003293"){
+    if(req.user.username == "test"||req.user.username == "001237"||req.user.username == "013569"||req.user.username == "003293"){
         req.query.search = req.query.search ? req.query.search : '';
         req.query.status = req.query.status ? req.query.status : '';
         req.query.limit = req.query.limit ? parseInt(req.query.limit, null) : 100;
@@ -24,12 +24,15 @@ exports.add = function(req, res, next){
             return callback(err, null);
         }
         var persons = results.data;;
-        persons.forEach(function(person){
-            person.class = "normal";
-            if(person.zip=="维修支持中级岗及以下"||person.phone=="003409"){
-                person.class = "support";
-            }
-        });
+        // persons.forEach(function(person){
+        //     person.class = "c1";
+        //     console.log(person.last);
+        //     if(person.name.last == "头等舱"){
+        //         person.class = "c2";
+        //     }else if(person.name.last == "经济舱乘务员"){
+        //         person.class = "c3";
+        //     }
+        // });
         res.render('account/article/add',{persons:persons});
         });
     }else{

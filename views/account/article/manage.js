@@ -1,7 +1,7 @@
 'use strict'
 
 exports.findall = function(req, res, next){
-    if(req.user.username == "012358"||req.user.username == "test"||req.user.username == "013569"||req.user.username == "003293"){
+    if(req.user.username == "001237"||req.user.username == "test"||req.user.username == "013569"||req.user.username == "003293"){
         req.query.name = req.query.name ? req.query.name : '';
         req.query.limit = req.query.limit ? parseInt(req.query.limit, null) : 100;
         req.query.page = req.query.page ? parseInt(req.query.page, null) : 1;
@@ -39,7 +39,7 @@ exports.findall = function(req, res, next){
 };
 
 exports.editinit = function(req, res, next){
-    if(req.user.username == "012358"||req.user.username == "003033"||req.user.username == "013569"||req.user.username == "05816"){
+    if(req.user.username == "001237"||req.user.username == "test"||req.user.username == "013569"||req.user.username == "05816"){
         req.query.search = req.query.search ? req.query.search : '';
         req.query.status = req.query.status ? req.query.status : '';
         req.query.limit = req.query.limit ? parseInt(req.query.limit, null) : 100;

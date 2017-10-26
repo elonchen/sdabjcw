@@ -18,15 +18,25 @@ block body
                 
                 label 选择人员（必填）(需多于一人，否则无效)
                 select(multiple="multiple" required="required" name="toPersons")
-                    optgroup(label="维修支持")
+                    optgroup(label="乘务长")
                         each person in persons
-                            case person.class
-                                when "support"
+                            case person.name.last
+                                when "乘务长"
                                     option(value="#{person.phone}/#{person.name.first}") #{person.name.first}
-                    optgroup(label="航线")
+                    optgroup(label="头等舱")
                         each person in persons
-                            case person.class
-                                when "normal"
+                            case person.name.last
+                                when "头等舱"
+                                    option(value="#{person.phone}/#{person.name.first}") #{person.name.first}
+                    optgroup(label="经济舱乘务员")
+                        each person in persons
+                            case person.name.last
+                                when "经济舱乘务员"
+                                    option(value="#{person.phone}/#{person.name.first}") #{person.name.first}
+                    optgroup(label="其他")
+                        each person in persons
+                            case person.name.last
+                                when "其他"
                                     option(value="#{person.phone}/#{person.name.first}") #{person.name.first}
                 div.form-group
                     label 概述：（必填）
