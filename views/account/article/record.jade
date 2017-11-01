@@ -21,12 +21,14 @@ block body
                             thead
                                 tr
                                     th 姓名
+                                    th 员工号
                                     th 阅签
                                     th 时间
                             tbody
                                 each reader in article.readers
                                     tr
-                                        td #{reader.name} 
+                                        td #{reader.name}
+                                        td #{reader.username} 
                                         td 
                                             if reader.isFinished
                                                 span.text-success 已经签阅

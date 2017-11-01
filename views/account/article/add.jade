@@ -51,13 +51,11 @@ block body
                     label 正文：（必填）
                     textarea.form-control(type='text', rows="20" placeholder="正文" name='body' id="editor" required="required")
                 div.form-group
-                    label 附件：
-                    input.form-control(type='file', name='uploadFile') 
-                div.form-group
                     button.btn.btn-primary.btn-signup.btn-block(type='submit') 创建阅签
             div.col-sm-4
                 div.page-header
-                    h1 添加人员注意事项
+                    h1 注意事项
+                    p 附件无法不建议在阅签系统中添加，建议在企业微信中单独发送或者在文件盘中共享
     script(src='/assets/js/vendor/jquery.min.js')
     script(src='/assets/mutiselect/multiple-select.js')
     script(src='/assets/js/checkboxSelect.js')
