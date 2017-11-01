@@ -52,7 +52,7 @@ exports.info = function(req, res, next){
                             
                         }
                     });
-                    var url = "http://sdabj.com/account/article/unread/";
+                    var url = "http://sdabj.com:3000/account/article/unread/";
                     usernames = usernames.join('|');
                     console.log(usernames);
                     wechatAPP.sendWechatUnread(usernames,"您有新的阅签通知",result.title,url,1000003);

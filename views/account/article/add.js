@@ -2,7 +2,7 @@ exports.add = function(req, res, next){
     if(req.user.username == "test"||req.user.username == "001237"||req.user.username == "013569"||req.user.username == "003293"){
         req.query.search = req.query.search ? req.query.search : '';
         req.query.status = req.query.status ? req.query.status : '';
-        req.query.limit = req.query.limit ? parseInt(req.query.limit, null) : 100;
+        req.query.limit = req.query.limit ? parseInt(req.query.limit, null) : 1000;
         req.query.page = req.query.page ? parseInt(req.query.page, null) : 1;
         req.query.sort = req.query.sort ? req.query.sort : '-_id';
         var filters = {};
@@ -23,7 +23,7 @@ exports.add = function(req, res, next){
         if (err) {
             return callback(err, null);
         }
-        var persons = results.data;;
+        var persons = results.data;
         // persons.forEach(function(person){
         //     person.class = "c1";
         //     console.log(person.last);

@@ -25,22 +25,34 @@ block body
                         each person in persons
                             case person.name.last
                                 when "乘务长"
-                                    option(value="#{person.phone}/#{person.name.first}") #{person.name.first}
+                                    if person.selected
+                                        option(value="#{person.phone}/#{person.name.first}" selected="#{person.selected}") #{person.name.first}
+                                    else
+                                        option(value="#{person.phone}/#{person.name.first}") #{person.name.first}
                     optgroup(label="头等舱")
                         each person in persons
                             case person.name.last
                                 when "头等舱"
-                                    option(value="#{person.phone}/#{person.name.first}") #{person.name.first}
+                                    if person.selected
+                                        option(value="#{person.phone}/#{person.name.first}" selected="#{person.selected}") #{person.name.first}
+                                    else
+                                        option(value="#{person.phone}/#{person.name.first}") #{person.name.first}
                     optgroup(label="经济舱乘务员")
                         each person in persons
                             case person.name.last
                                 when "经济舱乘务员"
-                                    option(value="#{person.phone}/#{person.name.first}") #{person.name.first}
+                                    if person.selected
+                                        option(value="#{person.phone}/#{person.name.first}" selected="#{person.selected}") #{person.name.first}
+                                    else
+                                        option(value="#{person.phone}/#{person.name.first}") #{person.name.first}
                     optgroup(label="其他")
                         each person in persons
                             case person.name.last
                                 when "其他"
-                                    option(value="#{person.phone}/#{person.name.first}") #{person.name.first}
+                                    if person.selected
+                                        option(value="#{person.phone}/#{person.name.first}" selected="#{person.selected}") #{person.name.first}
+                                    else
+                                        option(value="#{person.phone}/#{person.name.first}") #{person.name.first}
                 div.form-group
                     label 概述：（必填）
                     textarea.form-control(type='text', rows="5" placeholder="签阅内容的概述，字数最好不要超过300字" name='general' required="required") #{article.general}

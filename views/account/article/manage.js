@@ -42,7 +42,7 @@ exports.editinit = function(req, res, next){
     if(req.user.username == "001237"||req.user.username == "test"||req.user.username == "013569"||req.user.username == "05816"){
         req.query.search = req.query.search ? req.query.search : '';
         req.query.status = req.query.status ? req.query.status : '';
-        req.query.limit = req.query.limit ? parseInt(req.query.limit, null) : 100;
+        req.query.limit = req.query.limit ? parseInt(req.query.limit, null) : 1000;
         req.query.page = req.query.page ? parseInt(req.query.page, null) : 1;
         req.query.sort = req.query.sort ? req.query.sort : '-_id';
         var filters = {};
@@ -81,9 +81,7 @@ exports.editinit = function(req, res, next){
                             person.selected = true;
                         }
                     });
-                    if(person.zip=="维修支持中级岗及以下"||person.phone=="003409"){
-                        person.class = "support";
-                    }
+                    
                 });
                 console.log(result);
                 res.render('account/article/edit',{persons:persons,article:result});
