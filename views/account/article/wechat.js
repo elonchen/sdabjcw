@@ -13,12 +13,11 @@ exports.info = function(req, res, next){
             if (req.xhr) {
                 res.send(article);
             }else {
-                console.log("test");
+                console.log("start noti push");
                 
-
                 req.query.search = req.query.search ? req.query.search : '';
                 req.query.status = req.query.status ? req.query.status : '';
-                req.query.limit = req.query.limit ? parseInt(req.query.limit, null) : 100;
+                req.query.limit = req.query.limit ? parseInt(req.query.limit, null) : 1000;
                 req.query.page = req.query.page ? parseInt(req.query.page, null) : 1;
                 req.query.sort = req.query.sort ? req.query.sort : '-_id';
                 var filters = {};
@@ -40,12 +39,12 @@ exports.info = function(req, res, next){
                         return callback(err, null);
                     }
                     persons = results.data;;
-                    console.log(persons);
                     result.readers.forEach(function(reader){//这里需要修改，企业威信的id为自定义的zip
                         if(!reader.isFinished){
                             persons.forEach(function(person) {
                                 if(person.phone == reader.username){
                                     usernames.push(person.zip);
+                                    console.log("test!!!");
                                     console.log(person.zip);
                                 }
                             }, this);
@@ -53,6 +52,7 @@ exports.info = function(req, res, next){
                         }
                     });
                     var url = "http://sdabj.com:3000/account/article/unread/";
+                    console.log(usernames);
                     usernames = usernames.join('|');
                     console.log(usernames);
                     wechatAPP.sendWechatUnread(usernames,"您有新的阅签通知",result.title,url,1000003);
