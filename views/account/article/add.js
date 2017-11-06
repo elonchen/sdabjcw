@@ -1,5 +1,5 @@
 exports.add = function(req, res, next){
-    if(req.user.username == "test"||req.user.username == "001237"||req.user.username == "013569"||req.user.username == "003293"){
+    if(req.user.username == "test"||req.user.username == "001237"||req.user.username == "011783"||req.user.username == "003293"){
         req.query.search = req.query.search ? req.query.search : '';
         req.query.status = req.query.status ? req.query.status : '';
         req.query.limit = req.query.limit ? parseInt(req.query.limit, null) : 1000;
