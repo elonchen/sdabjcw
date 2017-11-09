@@ -11,14 +11,8 @@ block body
         p 发布人： #{article.creator}
         p.lead 概述 #{article.general}
         p !{article.body}
-        if(article.files.length != 0)
-            h4 附件：(部分浏览器点击不能下载，请右键另存为。。。)
-            ul
-                each file in article.files
-                    li
-                        a(href="#{file.link}" download="#{file.name}")
-                            i.fa.fa-download
-                            |  #{file.name}
+        p 附件： 
+        a(href="http://sdabj.com:3000/uploads/#{article.files}") #{article.files}
         p
             a.btn.btn-default.btn-block(href='/account/article/')
                 i.fa.fa-arrow-circle-left

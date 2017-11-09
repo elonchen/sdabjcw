@@ -62,7 +62,7 @@ exports.create = function(req, res, next){
             reader.name = item.split("/")[1];
             readers.push(reader);
         });
-    
+    console.log(req.body);
     var fieldsToSet = {
       title: req.body.title,
       general:req.body.general,
@@ -70,6 +70,7 @@ exports.create = function(req, res, next){
       body:req.body.body,
       timeCreate:timeCreate.getFullYear()+"年"+(timeCreate.getMonth()+1)+"月"+timeCreate.getDate()+"日"+timeCreate.getHours()+":"+timeCreate.getMinutes()+":"+timeCreate.getSeconds(),
       readers:readers,
+      files:req.body.Files,
       isImportant:req.body.isImportant,
       timeFinished:req.body.timeFinished,
       search: [

@@ -24,7 +24,21 @@ var api = new API('wxf01fb15a9cbdef24', 'AU2gpQG0Ui_9P1dFdAgYMnnHMzmA0YsA859X8mk
 
 //create express app
 var app = express();
-var upload = multer({ dest: './public/upload/' })
+
+//set storage engine
+const storage = multer.diskStorage({
+  destination:'./public/uploads',
+  filename:function(req,file,cb){
+      cb(null,file.fieldname+'-'+Date.now()+path.extname(file.originalname));
+  }
+});
+//init upload
+const upload = multer({
+  storage:storage,
+  limits:{
+      fileSize:10000000//10M
+  }
+}).single('myFile');
 
 //keep reference to config
 app.config = config;

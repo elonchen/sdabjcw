@@ -11,10 +11,7 @@ exports = module.exports = function(app, mongoose) {
     timeFinished:{type: String },
     numOfReader: { type:Number},
     numOfFinished: {type:Number},
-    files:[{
-      name:{type:String},
-      link:{type:String}
-    }],
+    files:{type:String},
     comments: [{
         cName:{type:String},
         username:{type:String},

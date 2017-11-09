@@ -219,7 +219,10 @@ exports = module.exports = function(app, passport) {
   app.get('/account/article/record/:id',require('./views/account/article/index').record);
   app.post('/account/article/wechat/:id/',require('./views/account/article/wechat').info);
   //app.post('/article/add',require('./views/article/add').create);
-
+//upload
+  app.get('/account/upload/', require('./views/account/upload/index').index);
+  app.post('/account/upload', require('./views/account/upload/index').uploader);
+  app.get('/uploads/:id',require('./views/account/upload/index').download);
     //account > measurement
   app.get('/account/measurement/', require('./views/account/measurement/index').find);
   app.get('/account/measurement/normal/:id/', require('./views/account/measurement/index').normal);
